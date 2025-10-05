@@ -1,0 +1,14 @@
+name: Print Email
+
+on:
+  workflow_dispatch:
+
+jobs:
+  print-email:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print the email (from workflow env)
+        env:
+          MY_EMAIL: "21f3000401@ds.study.iitm.ac.in"
+        run: |
+          echo "Email is: $MY_EMAIL"
